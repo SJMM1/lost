@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    
+    <script src="./js/prefixfree.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
+    <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>        
+    <![endif]-->
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <img src="./images/logo.png" alt="">
+        </header>
+        <nav>
+            <ul>
+                <li class="on">
+                    <i class="fa-solid fa-house"></i>
+                    <br>홈
+                </li>
+                <li>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <br>검색
+                </li>
+                <li>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <br>분실신고
+                </li>
+                <li>
+                    <i class="fa-solid fa-headset"></i>
+                    <br>분실물센터
+                </li>
+            </ul>
+        </nav>
+        <section id="section">
+            <p>최근습득물</p>
+            <div class="tabBox">
+                <ul class="tabtit">
+                    <li data-filter="">전체</li>
+                    <li data-filter="PRA000">가방</li>
+                    <li data-filter="PRB000">도서<br>용품</li>
+                    <li data-filter="PRC000">서류</li>
+                    <li data-filter="PRD000">산업<br>용품</li>
+                    <li data-filter="PRE000">스포츠<br>용품</li>
+                    <li data-filter="PRF000">자동차</li>
+                    <li data-filter="PRG000">전자<br>기기</li>
+                    <li data-filter="PRH000">지갑</li>
+                    <li data-filter="PRI000">컴퓨터</li>
+                    <li data-filter="PRJ000">휴대폰</li>
+                    <li data-filter="PRK000">의류</li>
+                    <li data-filter="PRL000">현금</li>
+                    <li data-filter="PRM000">유가<br>증권</li>
+                    <li data-filter="PRN000">증명서</li>
+                    <li data-filter="PRO000">귀금속</li>
+                    <li data-filter="PRP000">카드</li>
+                    <li data-filter="PRQ000">쇼핑백</li>
+                    <li data-filter="PRR000">악기</li>
+                    <li data-filter="PRS000">기타<br>물품</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+
+    <script src="./js/index.js"></script>  
+</body>
+</html>
