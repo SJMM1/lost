@@ -8,17 +8,21 @@
 //      pageNo      페이지 번호
 //      numOfRows   목록 건수
 // + getLosfundDetailInfo 습득물 상세정보 조회
+//      ATC_ID      관리ID
+//      FD_SN       습득순번
 // + getLosfundInfoAccToLc 습득물 위치기반 조회
 
-lostList("")
+lostList("PRA000")
 
 $(".tabtit li").on('click', function(){
+    $(this).siblings().removeClass('on')
+    $(this).addClass('on')
     $(".grid").remove()
-    var filterValue = $(this).attr('data-filter')
+    let filterValue = $(this).attr('data-filter')
     lostList(filterValue)
 })
 
-function lostList(filterValue){
+function lostList(filterValue) {
     $.ajax({
         url : "http://apis.data.go.kr/1320000/LosfundInfoInqireService"
         + "/getLosfundInfoAccToClAreaPd"
@@ -39,7 +43,7 @@ function lostList(filterValue){
                 $("#load_image").show();
             }
             else {
-                $('body').append('<div id="load_image" style="position:absolute; top:' + top + 'px; left:' + left + 'px; z-index:9999; background:#f0f0f0; filter:alpha(opacity=50); opacity:alpha*0.5; margin:auto; padding:0; "><img src="./images/loading.gif" style="width:50px; height:50px;"></div>');
+                $('body').append('<div id="load_image" style="position:absolute; top:' + top + 'px; left:' + left + 'px; z-index:9999; filter:alpha(opacity=50); opacity:alpha*0.5; margin:auto; padding:0; "><img src="./images/loading.gif" style="width:50px; height:50px;"></div>');
             }
         },
 
@@ -48,19 +52,19 @@ function lostList(filterValue){
         },
 
         success : function(data) {
-            var rfimg = `<div class='grid'>`;
+            let list = `<div class='grid'>`;
             $(data).find('item').each(function(){
                 let atcId = $(this).find('atcId').text()
                 let fdPrdtNm = $(this).find('fdPrdtNm').text()
                 let fdFilePathImg = $(this).find('fdFilePathImg').text()
 
                 if(fdFilePathImg != "https://www.lost112.go.kr/lostnfs/images/sub/img02_no_img.gif"){
-                    rfimg += `<div class='item' id='${atcId}'><img src='${fdFilePathImg}' alt='${fdPrdtNm}'></div>`
+                    list += `<div class='item' id='${atcId}'><img src='${fdFilePathImg}' alt='${fdPrdtNm}'></div>`
                 }
             });
-            rfimg += `</div>`
+            list += `</div>`
 
-            $('#section').append(rfimg);
+            $('#section').append(list);
 
             $(".item").css("height",$(".item").width())
             
@@ -71,3 +75,8 @@ function lostList(filterValue){
         }
     });   
 }
+
+$('body').on('click', '.item', function(){
+    let atcId = $(this).attr('id');
+    location.href = `info.html?atcId=${atcId}`
+})

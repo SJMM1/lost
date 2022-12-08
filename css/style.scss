@@ -1,14 +1,14 @@
 @charset "utf-8";
 * { margin:0; padding:0; box-sizing:border-box }
 img { border:none; vertical-align:middle; width: 100%; }
-a { color:inherit; text-decoration: none; }
+a { color:inherit; text-decoration: none; display: inline-block; }
 ul { list-style:none }
 header, section, footer, article, nav { display:block; }
 .blind { position:absolute; width:0; height:0; left:-9999px;top:0; overflow:hidden; font-size:0px; line-height:0px }
 .cf::before, .cf::after { content:''; display:block; clear:both }
 
-$maincolor:#f00;
-$subcolor:#b9b7b3;
+$maincolor: #2D6BBA;
+$subcolor: #1B3455;
 $pointcolor:orange;
 
 body {
@@ -22,6 +22,13 @@ body {
     scrollbar-width: none; /* Firefox */
     ::-webkit-scrollbar { 
         display: none; /* Chrome, Safari, Opera*/
+    }
+
+    h1 {
+        text-align: center;
+        .logo {
+            padding:0 50px 20px;
+        }
     }
 
     nav {
@@ -38,54 +45,109 @@ body {
             flex: 1;
             text-align: center;
             &.on {
-                color: #362691;
+                color: $maincolor;
             }
         }
     }
 
-    p { margin: 20px; }
-    .tabBox {
-        overflow-x: scroll;
-
-        .tabtit {
-            display: flex;
-            flex-direction: row;
-            gap: 7px;
-            width: 1173px;
-            margin: 0 auto;
-
-            li{
-                border: 1px solid #ddd;
-                border-radius: 15px;
-                cursor: pointer;
-                flex: 0 0 50px;
-                height: 50px;
-                text-align: center;
-                font-size: 15px;
+    #section {
+        margin-bottom: 42px;
+        h2 { 
+            margin: 20px;
+            font-size: 22px;
+            font-weight: bold; 
+        }
+        .tabBox {
+            overflow-x: scroll;
+    
+            .tabtit {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                &:first-child {
-                    margin-left: 20px;
+                flex-direction: row;
+                gap: 7px;
+                width: 1173px;
+                margin: 0 auto;
+    
+                li {
+                    border: 1px solid #ddd;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    flex: 0 0 50px;
+                    height: 50px;
+                    text-align: center;
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:first-child {
+                        margin-left: 20px;
+                    }
+                    &.on {
+                        background-color: $maincolor;
+                        color: #fff;
+                        border: 1px solid $subcolor;
+                    }
                 }
             }
         }
-    }
+        
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            .item {
+                flex-basis: 47.5%;
+                margin-bottom: 5%;
+                &:nth-child(odd) {
+                    margin-right: 5%;
+                }
+                img { 
+                    border-radius: 15px;
+                    height: 100%;
+                }
+            }
+        }
     
-    .grid {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 20px;
-        .item {
-            flex-basis: 47.5%;
-            margin-bottom: 5%;
-            &:nth-child(odd) {
-                margin-right: 5%;
+        .info_img {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 50%;
             }
-            img { 
-                border-radius: 15px;
-                height: 100%;
+        }
+    
+        .info {
+            padding: 20px;
+            table {
+                border-collapse: collapse;
+                tr {
+                    border: 1px solid #000;
+                    border-left: none;
+                    border-right: none;
+                    &:first-child {
+                        border-top: none;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    th {
+                        width: 100px;
+                        text-align: right;
+                        border-right: 1px solid #000;
+                    }
+                    th, td {
+                        padding: 10px;   
+                    }
+                    
+                }
+                
             }
+        }
+
+        .searchBox {
+            background-color: #eee;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
         }
     }
 }
