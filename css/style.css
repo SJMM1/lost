@@ -165,9 +165,82 @@ body {
 #wrap #section .info table tr th, #wrap #section .info table tr td {
   padding: 10px;
 }
+#wrap #section .info div {
+  text-align: right;
+}
+#wrap #section .info div a {
+  padding: 10px 20px;
+  margin: 20px 10px;
+  background-color: #2D6BBA;
+  border-radius: 5px;
+  color: #fff;
+}
 #wrap #section .searchBox {
   background-color: #eee;
   border-radius: 20px;
   padding: 20px;
   margin: 20px;
+}
+#wrap #section .searchBox .input_content label {
+  width: 20%;
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+  margin-right: 10px;
+}
+#wrap #section .searchBox .input_content div {
+  display: inline;
+  overflow: hidden;
+}
+#wrap #section .searchBox .input_content div select, #wrap #section .searchBox .input_content div input {
+  padding: 10px;
+  width: 35%;
+  margin: 5px;
+}
+#wrap #section .searchBox .input_content div select:last-child, #wrap #section .searchBox .input_content div input:last-child {
+  float: right;
+}
+#wrap #section .searchBox .input_content div button {
+  padding: 10px;
+  width: 15%;
+  margin: 5px;
+  float: right;
+  background-color: #2D6BBA;
+  color: #fff;
+  border: none;
+}
+#wrap #section .searchList {
+  padding: 20px;
+  margin: 20px;
+}
+#wrap #section .searchList .searchitem {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+#wrap #section .searchList .searchitem:last-child {
+  border-bottom: none;
+}
+#wrap #section .searchList .searchitem .title {
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#wrap #section .searchList .searchitem .date {
+  font-size: 14px;
+  margin-top: 5px;
+}
+#wrap #section .more {
+  text-align: center;
+}
+#wrap #section .more button {
+  padding: 10px;
+  width: 15%;
+  margin: 0 0 30px;
+  background-color: #1B3455;
+  color: #fff;
+  border: none;
+}
+#wrap #section .more button:disabled {
+  background-color: #ccc;
 }/*# sourceMappingURL=style.css.map */

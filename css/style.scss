@@ -141,6 +141,16 @@ body {
                 }
                 
             }
+            div {
+                text-align: right;
+                a {
+                    padding: 10px 20px;
+                    margin: 20px 10px;
+                    background-color: $maincolor;
+                    border-radius: 5px;
+                    color: #fff;
+                }
+            }
         }
 
         .searchBox {
@@ -148,7 +158,74 @@ body {
             border-radius: 20px;
             padding: 20px;
             margin: 20px;
+            .input_content {
+                label {
+                    width: 20%;
+                    display: inline-block;
+                    text-align: right;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+                div {
+                    display: inline;
+                    overflow: hidden;
+                    select, input {
+                        padding: 10px;
+                        width: 35%;
+                        margin: 5px;
+                        &:last-child {
+                            float: right;
+                        }
+                    }
+                    button {
+                        padding: 10px;
+                        width: 15%;
+                        margin: 5px;
+                        float: right;
+                        background-color: $maincolor;
+                        color: #fff;
+                        border: none;
+                    }
+                }
+            }
+            
         }
+        .searchList {
+            padding: 20px;
+            margin: 20px;
+            .searchitem {
+                border-bottom: 1px solid #ccc;
+                padding: 10px 0;
+                &:last-child{
+                    border-bottom: none;
+                }
+                .title {
+                    width: 95%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .date {
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+            }
+            
+        }
+        .more {
+            text-align: center;
+            button {
+                padding: 10px;
+                width: 15%;
+                margin: 0 0 30px;
+                background-color: $subcolor;
+                color: #fff;
+                border: none;
+                &:disabled {
+                    background-color:#ccc;
+                }
+            }
+        }  
     }
 }
 
