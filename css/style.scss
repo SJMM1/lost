@@ -160,18 +160,19 @@ body {
             margin: 20px;
             .input_content {
                 label {
-                    width: 15%;
+                    width: 18%;
                     display: inline-block;
                     text-align: right;
                     font-weight: bold;
                     margin-right: 10px;
+                    white-space: nowrap;
                 }
                 div {
                     display: inline;
                     overflow: hidden;
                     select, input {
                         padding: 10px;
-                        width: 33%;
+                        width: 32%;
                         margin: 5px;
                         &:last-child {
                             float: right;

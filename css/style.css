@@ -182,11 +182,12 @@ body {
   margin: 20px;
 }
 #wrap #section .searchBox .input_content label {
-  width: 15%;
+  width: 18%;
   display: inline-block;
   text-align: right;
   font-weight: bold;
   margin-right: 10px;
+  white-space: nowrap;
 }
 #wrap #section .searchBox .input_content div {
   display: inline;
@@ -194,7 +195,7 @@ body {
 }
 #wrap #section .searchBox .input_content div select, #wrap #section .searchBox .input_content div input {
   padding: 10px;
-  width: 33%;
+  width: 32%;
   margin: 5px;
 }
 #wrap #section .searchBox .input_content div select:last-child, #wrap #section .searchBox .input_content div input:last-child {
