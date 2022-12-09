@@ -17,7 +17,7 @@ function searchList(num){
         data: param,
         
         beforeSend: function () {
-            let top = ( $(window).height() ) / 2 + $(window).scrollTop();
+            let top = ( $(window).height() ) / 1.5 + $(window).scrollTop();
             let left = ( $(window).width() ) / 2 + $(window).scrollLeft();
             
             if($("#load_image").length != 0) {
