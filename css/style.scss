@@ -47,6 +47,12 @@ body {
             &.on {
                 color: $maincolor;
             }
+            i {
+                font-size: 18px;
+            }
+            span {
+                font-size: 14px;
+            }
         }
     }
 
@@ -135,7 +141,10 @@ body {
                         border-right: 1px solid #000;
                     }
                     th, td {
-                        padding: 10px;   
+                        padding: 10px; 
+                        i {
+                            color: $maincolor;
+                        }  
                     }
                     
                 }
@@ -193,7 +202,6 @@ body {
         }
         .searchList {
             padding: 20px;
-            margin: 20px;
             .searchitem {
                 border-bottom: 1px solid #ccc;
                 padding: 10px 0;

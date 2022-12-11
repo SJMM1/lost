@@ -79,6 +79,12 @@ body {
 #wrap nav li.on {
   color: #2D6BBA;
 }
+#wrap nav li i {
+  font-size: 18px;
+}
+#wrap nav li span {
+  font-size: 14px;
+}
 #wrap #section {
   margin-bottom: 42px;
 }
@@ -165,6 +171,9 @@ body {
 #wrap #section .info table tr th, #wrap #section .info table tr td {
   padding: 10px;
 }
+#wrap #section .info table tr th i, #wrap #section .info table tr td i {
+  color: #2D6BBA;
+}
 #wrap #section .info div {
   text-align: right;
 }
@@ -212,7 +221,6 @@ body {
 }
 #wrap #section .searchList {
   padding: 20px;
-  margin: 20px;
 }
 #wrap #section .searchList .searchitem {
   border-bottom: 1px solid #ccc;

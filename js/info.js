@@ -53,7 +53,7 @@ function lostInfo(atcId) {
                     </tr>
                     <tr>
                         <th>연락처</th>
-                        <td><a href='tel:${tel}'>${tel}</a></td>
+                        <td><a href='tel:${tel}'>${tel} <i class="fa-solid fa-phone"></i></a></td>
                     </tr>
                     <tr>
                         <th>내용</th>
